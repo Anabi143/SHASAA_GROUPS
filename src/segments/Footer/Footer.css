@@ -1,0 +1,187 @@
+footer{
+    overflow: hidden;
+    padding: 60px 0;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Newsletter */
+footer .newsletter{
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    border-radius: 1.5rem;
+    background-image: url("../../assets/bg-1.svg");
+    background-size: 400px;
+    background-position: center;
+    color: var(--color-white);
+}
+
+/* Subscribe Box */
+footer .newsletter .subscribe{
+    display: flex;
+    align-items: stretch;
+    max-width: 600px;
+    margin: 20px auto;
+    background: var(--bg-secondary);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Input */
+footer .newsletter .subscribe input{
+    flex: 1;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+/* Button */
+footer .newsletter .subscribe button{
+    padding: 10px 25px;
+    background: var(--primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+footer .newsletter .subscribe button:hover{
+    opacity: 0.9;
+}
+
+/* Footer Grid */
+footer .box-wrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* Logo */
+footer .logo{
+    margin-bottom: 30px;
+}
+
+/* Social Icons */
+footer .socials{
+    margin-top: 40px;
+}
+
+/* Navigation Links */
+footer .route{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0.8rem 0;
+    color: var(--text-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+footer .route:hover{
+    color: var(--primary);
+}
+
+/* Contact Icon */
+footer .route .icon{
+    font-size: 18px;
+}
+
+
+
+/* ========================= */
+/* Footer Bottom Section */
+/* ========================= */
+
+footer .footer-bottom{
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-align: center;
+}
+
+/* Copyright */
+footer .footer-bottom .copyright{
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+/* Links Container */
+footer .footer-links{
+    display: flex;
+    gap: 20px;
+}
+
+/* Links Style */
+footer .footer-links span{
+    font-size: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+}
+
+/* Hover Effect */
+footer .footer-links span:hover{
+    color: var(--primary);
+}
+
+/* Divider */
+footer .footer-links span:not(:last-child)::after{
+    content: "|";
+    margin-left: 20px;
+    color: var(--text-muted);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width:600px){
+
+    footer .footer-links{
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    footer .footer-links span:not(:last-child)::after{
+        display: none;
+    }
+
+}
+/* ---------------- RESPONSIVE ---------------- */
+
+@media screen and (max-width:800px){
+
+    footer .box-wrapper{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media screen and (max-width:600px){
+
+    footer{
+        text-align: center;
+    }
+
+    footer .box-wrapper{
+        grid-template-columns: 1fr;
+    }
+
+    footer .logo,
+    footer .socials,
+    footer .route{
+        justify-content: center;
+    }
+
+
+
+}

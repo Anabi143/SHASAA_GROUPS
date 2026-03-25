@@ -1,0 +1,60 @@
+#services {
+    padding: 100px 0;
+    background: #0f172a;
+}
+
+/* GRID */
+#services .services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+/* CARD */
+#services .service {
+    height: 320px;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: relative;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* DARK OVERLAY */
+#services .service::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.35);
+    transition: background 0.4s ease;
+}
+
+/* Hover Effect */
+#services .service:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+#services .service:hover::after {
+    background: rgba(0,0,0,0.15);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    #services .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    #services .services {
+        grid-template-columns: 1fr;
+    }
+}

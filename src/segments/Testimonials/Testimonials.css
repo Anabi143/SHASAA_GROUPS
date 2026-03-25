@@ -1,0 +1,91 @@
+/* ===============================
+   TESTIMONIALS SECTION
+================================= */
+
+#testimonials {
+    position: relative;
+    padding: 80px 0;
+}
+
+/* Spotlight Effect */
+#testimonials .spotlight {
+    position: absolute;
+    height: 200px;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, rgba(108, 153, 187, 0.937), transparent 70%);
+    filter: blur(80px);
+    z-index: 0;
+}
+
+/* Wrapper */
+#testimonials .testimonials-wrapper {
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Card */
+#testimonials .testimonial {
+    height: 100%;
+    text-align: center;
+    background: var(--bg-secondary);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+#testimonials .testimonial:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Text */
+#testimonials .testimonial .top {
+    flex: 1;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Star Rating */
+#testimonials .testimonial .star-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    font-size: 20px;
+    color: var(--color-warning);
+}
+
+/* Profile Image */
+#testimonials .testimonial .profile {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#testimonials .testimonial .profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Name */
+#testimonials .testimonial h4 {
+    margin-bottom: 5px;
+}
+
+/* Job Title */
+#testimonials .testimonial .job-title {
+    color: var(--text-muted);
+    font-size: 14px;
+}

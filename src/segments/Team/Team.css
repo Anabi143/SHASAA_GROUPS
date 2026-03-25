@@ -1,0 +1,105 @@
+#team{
+    background:#0f172a;
+    padding:90px 0;
+}
+
+/* GRID */
+#team .team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+/* CARD */
+#team .team-card{
+    background:var(--bg-base);
+    border-radius:18px;
+    overflow:hidden;
+    transition:0.35s ease;
+    position:relative;
+    cursor:pointer;
+}
+
+/* SPOTLIGHT EFFECT (mouse follow) */
+#team .team-card::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:radial-gradient(
+        300px circle at var(--x) var(--y),
+        rgba(127, 172, 165, 0.15),
+        transparent 40%
+    );
+    opacity:0;
+    transition:0.3s;
+    z-index:1;
+}
+
+#team .team-card:hover::before{
+    opacity:1;
+}
+
+/* HOVER FLOAT */
+#team .team-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.35);
+}
+
+/* IMAGE */
+#team .team-card img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    transition:0.5s;
+    position:relative;
+    z-index:0;
+}
+
+/* IMAGE ZOOM */
+#team .team-card:hover img{
+    transform:scale(1.08);
+}
+
+/* ================= HOVER OVERLAY ================= */
+
+#team .team-overlay{
+    position:absolute;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:rgba(0,0,0,0.55);
+
+    opacity:0;
+    transition:0.4s ease;
+    z-index:2;
+}
+
+/* SHOW OVERLAY */
+#team .team-card:hover .team-overlay{
+    opacity:1;
+}
+
+/* NAME TEXT */
+#team .team-overlay h3{
+    color:#fff;
+    font-size:22px;
+    font-weight:600;
+
+    transform:translateY(20px);
+    transition:0.4s ease;
+}
+
+/* TEXT ANIMATION */
+#team .team-card:hover .team-overlay h3{
+    transform:translateY(0);
+}
+
+/* MOBILE */
+@media screen and (max-width:768px){
+    #team .team-card img{
+        height:260px;
+    }
+}

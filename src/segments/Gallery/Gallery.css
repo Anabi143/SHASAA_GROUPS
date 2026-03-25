@@ -1,0 +1,94 @@
+#portfolio{
+    background:#1f2b46;
+    padding:100px 0;
+}
+
+/* CEO WRAPPER */
+#portfolio .ceo-wrapper{
+    display:grid;
+    grid-template-columns: 400px 1fr;
+    gap:60px;
+    align-items:center;
+    margin-top:60px;
+}
+
+/* CEO IMAGE */
+#portfolio .ceo-image{
+    position:relative;
+    text-align:center;
+}
+
+#portfolio .ceo-image img{
+    width:100%;
+    max-width:350px;
+    filter:drop-shadow(0 20px 40px rgba(0,0,0,0.5));
+    transition:0.4s;
+}
+
+/* IMAGE FLOAT EFFECT */
+#portfolio .ceo-image:hover img{
+    transform:translateY(-10px) scale(1.03);
+}
+
+/* CEO CONTENT */
+#portfolio .ceo-content{
+    background:rgba(255,255,255,0.03);
+    padding:40px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.08);
+}
+
+/* TEXT */
+#portfolio .ceo-content p{
+    margin-bottom:16px;
+    line-height:1.7;
+    color:#cbd5f5;
+}
+
+/* SIGNATURE */
+#portfolio .ceo-sign{
+    margin-top:30px;
+}
+
+#portfolio .ceo-sign h3{
+    font-size:20px;
+    color:white;
+}
+
+#portfolio .ceo-sign span{
+    color:#94a3b8;
+    font-size:14px;
+}
+
+.gallery-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background:var(--primary);
+    color:white;
+    border-radius:30px;
+    font-weight:500;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.gallery-btn:hover{
+    background:#2563eb;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* MOBILE */
+@media screen and (max-width:900px){
+
+#portfolio .ceo-wrapper{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+#portfolio .ceo-image img{
+    margin:auto;
+}
+
+}
